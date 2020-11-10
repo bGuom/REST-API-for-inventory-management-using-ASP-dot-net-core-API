@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "6257a4f3-c682-4d2b-8ffd-cae316a8655f",
+		"name": "Product API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Username\" : \"username\",\n\t\"Email\" : \"example@email.com\",\n\t\"FullName\" : \"User Full Name Here\",\n\t\"Address\" : \"User Address Here\",\n\t\"Password\" : \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:12752/api/account/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"account",
+								"register"
+							]
+						},
+						"description": "Create User Account"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"username\",\n    \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:12752/api/account/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"account",
+								"auth"
+							]
+						},
+						"description": "Get JWT Token"
+					},
+					"response": []
+				},
+				{
+					"name": "UserInfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6Ijg5ZjU4MmEzLTk0NWQtNDJjNC05YjY1LTZmYWZlMTNlZTdhNCIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyODIxMDA0LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.JE2uo8rPWyXM6G7_j_bPp2yCPvem8n2lV5-TrWcscAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12752/api/account/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"account",
+								"info"
+							]
+						},
+						"description": "Get Logged in User info"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "List Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6Ijg5ZjU4MmEzLTk0NWQtNDJjNC05YjY1LTZmYWZlMTNlZTdhNCIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyODIxMDA0LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.JE2uo8rPWyXM6G7_j_bPp2yCPvem8n2lV5-TrWcscAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12752/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "List all available products"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6Ijg5ZjU4MmEzLTk0NWQtNDJjNC05YjY1LTZmYWZlMTNlZTdhNCIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyODIxMDA0LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.JE2uo8rPWyXM6G7_j_bPp2yCPvem8n2lV5-TrWcscAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProductName",
+									"value": "Product Name Here",
+									"type": "text"
+								},
+								{
+									"key": "UnitPrice",
+									"value": "UnitType Here",
+									"type": "text"
+								},
+								{
+									"key": "ProductTypeID",
+									"value": "Product Type ID here",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:12752/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Create new product (You should have admin login)"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImp0aSI6IjQzNDgyNDY5LTQxMTYtNGE0Ny1hMDU1LTA4ZTVlZGMxMTAwMiIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6IkFkbWluIiwiZXhwIjoxNTYyODIzNzI5LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.-ajn_y_Zb2ulOp2etE3Kh1UXv8nAHWPPlgujwk_9vJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12752/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Get product by ID"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ProductTypes",
+			"item": [
+				{
+					"name": "List Product Types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6Ijg5ZjU4MmEzLTk0NWQtNDJjNC05YjY1LTZmYWZlMTNlZTdhNCIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyODIxMDA0LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.JE2uo8rPWyXM6G7_j_bPp2yCPvem8n2lV5-TrWcscAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12752/api/producttypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"producttypes"
+							]
+						},
+						"description": "Get all the product types"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a Product Type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6Ijg5ZjU4MmEzLTk0NWQtNDJjNC05YjY1LTZmYWZlMTNlZTdhNCIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyODIxMDA0LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.JE2uo8rPWyXM6G7_j_bPp2yCPvem8n2lV5-TrWcscAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:12752/api/producttypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"producttypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product Type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6Ijg5ZjU4MmEzLTk0NWQtNDJjNC05YjY1LTZmYWZlMTNlZTdhNCIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyODIxMDA0LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.JE2uo8rPWyXM6G7_j_bPp2yCPvem8n2lV5-TrWcscAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"TypeName\" : \"Product Type Name\",\n\t\"Description\" : \"Product Description\" \n}"
+						},
+						"url": {
+							"raw": "http://localhost:12752/api/producttypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"producttypes"
+							]
+						},
+						"description": "Create new product type"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Stocks",
+			"item": [
+				{
+					"name": "List All Stocks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImp0aSI6IjQzNDgyNDY5LTQxMTYtNGE0Ny1hMDU1LTA4ZTVlZGMxMTAwMiIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6IkFkbWluIiwiZXhwIjoxNTYyODIzNzI5LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.-ajn_y_Zb2ulOp2etE3Kh1UXv8nAHWPPlgujwk_9vJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12752/api/stocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"stocks"
+							]
+						},
+						"description": "Get all of stocks"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImp0aSI6IjQzNDgyNDY5LTQxMTYtNGE0Ny1hMDU1LTA4ZTVlZGMxMTAwMiIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6IkFkbWluIiwiZXhwIjoxNTYyODIzNzI5LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.-ajn_y_Zb2ulOp2etE3Kh1UXv8nAHWPPlgujwk_9vJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12752/api/stocks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"stocks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImp0aSI6IjQzNDgyNDY5LTQxMTYtNGE0Ny1hMDU1LTA4ZTVlZGMxMTAwMiIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6IkFkbWluIiwiZXhwIjoxNTYyODIzNzI5LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.-ajn_y_Zb2ulOp2etE3Kh1UXv8nAHWPPlgujwk_9vJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"ProductID\" : \"Product ID\",\n\t\"Quantity\" : \"Stock Quantity\",\n\t\"Threshold\" : \"Alert on Threshold\",\n\t\"ExpiryDate\" : \"MM/DD/YYYY\",\n\t\"Supplier\" : \"Supplier Name\",\n\t\"Description\" : \"Details about the stock.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:12752/api/stocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"stocks"
+							]
+						},
+						"description": "Create new stock"
+					},
+					"response": []
+				},
+				{
+					"name": "Use a Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImp0aSI6IjQzNDgyNDY5LTQxMTYtNGE0Ny1hMDU1LTA4ZTVlZGMxMTAwMiIsIlVzZXJUeXBlIjoiQWRtaW4iLCJVc2VyTmFtZSI6IkFkbWluIiwiZXhwIjoxNTYyODIzNzI5LCJpc3MiOiJUU1AiLCJhdWQiOiJBcGlVc2VyIn0.-ajn_y_Zb2ulOp2etE3Kh1UXv8nAHWPPlgujwk_9vJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"StockID\": \"1\",\n    \"UsedQuantity\": \"10\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:12752/api/stocks/use",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12752",
+							"path": [
+								"api",
+								"stocks",
+								"use"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

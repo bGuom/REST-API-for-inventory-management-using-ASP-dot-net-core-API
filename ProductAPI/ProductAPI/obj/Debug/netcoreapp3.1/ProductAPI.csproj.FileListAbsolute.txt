@@ -1,0 +1,6 @@
+/Users/buddhigunarathne/Desktop/ProductAPI/ProductAPI/ProductAPI/obj/Debug/netcoreapp3.1/ProductAPI.csprojAssemblyReference.cache
+/Users/buddhigunarathne/Desktop/ProductAPI/ProductAPI/ProductAPI/obj/Debug/netcoreapp3.1/ProductAPI.AssemblyInfoInputs.cache
+/Users/buddhigunarathne/Desktop/ProductAPI/ProductAPI/ProductAPI/obj/Debug/netcoreapp3.1/ProductAPI.AssemblyInfo.cs
+/Users/buddhigunarathne/Desktop/ProductAPI/ProductAPI/ProductAPI/obj/Debug/netcoreapp3.1/ProductAPI.csproj.CoreCompileInputs.cache
+/Users/buddhigunarathne/Desktop/ProductAPI/ProductAPI/ProductAPI/obj/Debug/netcoreapp3.1/ProductAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/buddhigunarathne/Desktop/ProductAPI/ProductAPI/ProductAPI/obj/Debug/netcoreapp3.1/ProductAPI.MvcApplicationPartsAssemblyInfo.cache

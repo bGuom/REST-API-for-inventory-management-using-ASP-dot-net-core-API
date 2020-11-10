@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{6D82ED42-E422-4649-90B5-17D7629C50C0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProductAPI/Models/Context/APIContext.cs">
+    <Files>
+      <File FileName="ProductAPI/Startup.cs" Line="131" Column="71" />
+      <File FileName="ProductAPI/Models/DBModels/Stock.cs" Line="1" Column="1" />
+      <File FileName="ProductAPI/Models/Context/APIContext.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProductAPI" expanded="True">
+            <Node name="ProductAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Context" expanded="True">
+                  <Node name="APIContext.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProductAPI PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
